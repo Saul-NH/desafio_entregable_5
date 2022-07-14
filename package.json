@@ -1,7 +1,7 @@
 {
-  "name": "desafio_entregable_4",
+  "name": "desafio_entregable_5",
   "version": "1.0.0",
-  "description": "Api Restful with Express Js",
+  "description": "Web Server",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js",
@@ -10,9 +10,11 @@
   "author": "Saul Navarro",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.8",
     "express": "^4.18.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.18"
-  }
+  },
+  "keywords": []
 }

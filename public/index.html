@@ -4,35 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API REST</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Product Form</title>
 </head>
 <body>
-    <form action="/api/products" method="get" target="_blank">
-        <input type="submit" value="Get All Products">
-    </form>
+    
+    <nav class="navbar navbar-dark bg-dark ">
+        <div class="container-fluid ">
+          <a class="navbar-brand mx-auto " href="/products">Product List</a>
+        </div>
+    </nav>
 
-    <br>
-
-    <form method="get" id="getProductById" target="_blank">
-        <input type="number" name="id" id="id" oninput = "return getProductById(); false;">
-        <input type="submit" value="Get Product by id">
-    </form>
-
-    <br>
-<hr>
-    <form action="/api/products/" method="post" target="_blank">
-        <label for="title">Title:</label>
-        <input type="text" name="title" id="title"><br><br>
-
-        <label for="price">Price:</label>
-        <input type="number" name="price" id="price"><br><br>
-
-        <label for="thumbnail">Thumbnail:</label>
-        <input type="url" name="thumbnail" id="thumbnail"><br><br>
-        <input type="submit" value="Create">
-    </form>
-
-
+    
+    <div class="container mx-auto">
+        
+        <form class="" id=""action="/products/" method="post">
+            <div class="row mt-5">
+                <div class="col-3"></div>
+                <div class="col-6 form-group border border-dark rounded pt-5 pb-5 px-4">
+                    <label for="title" class="form-label">Title:</label>
+                    <input type="text" class="form-control" name="title" id="title" required>
+                    
+                    <label for="price" class="form-label">Price:</label>
+                    <input type="number" class="form-control" name="price" id="price" step="0.1" required>
+                    
+                    <label for="thumbnail" class="form-label">Thumbnail:</label>
+                    <input type="url" class="form-control" name="thumbnail" id="thumbnail" required>
+                    
+                    <input type="submit" class="btn btn-success form-control mt-4" value="Create">
+                    
+                </div>
+                <div class="col-3"></div>
+            </div>
+  
+            
+        </form>
+    </div>
+    
+    
     <script>
         function getProductById() {
             let id = document.getElementById('id').value ;
@@ -40,5 +49,6 @@
             form.setAttribute('action', '/api/products/' + id);
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
